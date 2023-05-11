@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Groceries</title>
+    <link rel="stylesheet" href="./js/style.js">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+   
+    <style>
+        @media only screen and (max-width: 600px) {
+            .header-wrapper{
+                flex-direction: column;
+            }
+            .menu{
+                width: 100%;
+                flex-direction: column;
+                
+            }
+            .logo{
+                margin-bottom: 14px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Moqups</div>
+        <div class="nav">
+            <div class="nav-item"><a href="#home" style="text-decoration: none;">Home</a></div>
+            <div class="nav-center"><a href="#packages" style="text-decoration: none;">Our Packages</a></div>
+            <div class="nav-item"><a href="#call-us" style="text-decoration: none;">Call Us</a></div>
+
+           
+        </div>
+    </header>
+    
+
+    <main class="main">
+        <section id="home">
+            <div class="banner">
+                <h1 style="margin-top: 5px;">Top Rated E-Groceries Shop in Indonesia</h1>
+                <h3>Everyday with the best ingredients</h3>
+            </div>
+
+        </section>
+        <section class="main-form">
+
+            <img class="element1" src="./assets/gambar1.jfif" alt="">
+            <img class="element1" src="./assets/gambar2.jfif" alt="">
+            <img class="element1" src="./assets/gambar3.jfif" alt="">
+            <div class="element">
+                
+                <form class="form">
+
+                    <h3>Contact us</h3>
+                    <p><span>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</s[an]></p>
+                    
+                        <label for="">Your Name :</label>
+                        <input type="text" id="name" name="name">
+
+                        <label for="">Email Address :</label>
+                        <input type="email" id="email" name="email">
+
+                        <!-- <label for="">What are you interested in ?</label>
+                        <input type="text" id="favorite" name="favorite"> -->
+                        
+                            <label >What are you interested in ?</label>
+                            <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                              <option selected >Select Option</option>
+                              <option value="1">Fried Chicken</option>
+                              <option value="2">Rendang</option>
+                              <option value="3">Meat Ball</option>
+                            </select>
+                        
+                    
+                    <button type="submit" class="btn mt-5">Submit</button>
+                  </form>
+            </div>
+            
+        </section>
+        <div class="btn-img" style="align-items: center;">
+            <button class="" onclick="plusDivs(-1)">Previous</button>     
+            <button onclick="plusDivs(1)">Next</button> 
+        </div>
+        
+        
+            
+        <!-- our packages -->
+        
+        <section class="main-form">
+            <div class="element">
+                <span class="text-center mt-5"><em>"setiap hari beli sayur buah yang fresh disini"</em></span>
+                <!-- <div class="chip">
+                    <img src="./assets/person.png" alt="Person" width="80" height="80">
+                    John Doe
+                    
+                </div> -->
+                <br>    
+                <li class="d-flex mb-4 pb-1">
+                    <div class="avatar flex-shrink-0 me-3">
+                      <img src="./assets/person.png" alt="User" />
+                    </div>
+                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                      <div class="me-2">
+                          <h6 class="mb-0">Florence Hughes</h6>
+                          <small class="text-muted d-block mb-1">Ibu rumah tangga,28</small>
+                          <br style="border-bottom: 1px solid grey;">
+                      </div>
+                    </div>
+                </li>
+                
+            </div>
+            
+            
+        </section>
+        <section class="main-form">
+            <div class="element">
+                <br>
+                <div class="point cp5">
+                    <div class="nopoin"><p style="margin-top: 2px;">1</p></div>
+                        
+                        <p class="isipoin">Your first feature, written in the form of a benefit statemen</p>
+                </div>
+                <div class="point cp5">
+                      <div class="nopoin"> <p> 2</p> </div>  
+                        <p class="isipoin">Your second feature, written in the form of a benefit statemen</p>
+                </div>
+                <div class="point cp5">
+                    <div class="nopoin"> <p>3</p> </div>  
+                      <p class="isipoin">Your third feature, written in the form of a benefit statemen</p>
+              </div>
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <!-- <script>
+        function validateForm() {
+            var name = document.forms['message-form']['name'].value;
+            var email = document.forms['message-form']['name'].value;
+            var favorite = document.forms['message-form']['favorite'].value;
+
+            if(name == "" || email == "" || favorite == ""){
+                alert('Input tidak boleh kosong');
+                return false;
+            }
+
+            document.getElementById('sender-name').innerText=name;
+            document.getElementById('sender-email').innerText=email;
+            document.getElementById('sender-favorite').innerText=favorite;
+            
+            return false;
+        }
+    </script>
+    <div>
+        <p>nama <span id="sender-name"></span></p>
+        <p>email <span id="sender-email"></span></p>
+        <p>favorite <span id="sender-favorite"></span></p>
+    </div> -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n){
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n){
+            var i;
+            var imgList = document.getElementsByClassName("element1");
+            if (n > imgList.length) slideIndex = 1
+            else if (n < 1) slideIndex = imgList.length;
+            
+            for (i = 0; i < imgList.length; i++){
+                imgList[i].style.display = "none";
+            }
+            imgList[slideIndex - 1].style.display = "block";
+
+            setInterval (() => {
+                plusDivs(5);
+            }, 1000)
+        }
+    </script>
+</body>
+</html>
